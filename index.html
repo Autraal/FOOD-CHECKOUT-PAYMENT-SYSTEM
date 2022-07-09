@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD CHECKOUT SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+</head>
+<body>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.7.0/sql-wasm.js"></script> -->
+    <!-- <script src="https://checkout.flutterwave.com/v3.js"></script> -->
+
+
+    <div><strong>ENTER FOOD AMOUNT TO PROCEED</strong></div>
+    <div>FOOD AMOUNT IN NAIRA</div>
+    <input type="tel" id="amount" required>
+    <div>PHONE NUMBER</div>
+<input type="text" id="customer_no" required>
+<div>FULL NAME</div>
+<input type="text" id="customer_name" required>
+<br> <br> <br>
+<button onclick="total(event)">TOTAL</button>
+<!-- <input type="button" value="TOTAL" onclick="total(event)> -->
+
+<div id="p-con">
+<p id="output"></p>
+<p id="output-amount"></p>
+<p id="output-charges"></p> 
+</div>
+
+<script src="./script.js"></script>
+<script src="./payment.js"></script>
+</body>
+</html>
