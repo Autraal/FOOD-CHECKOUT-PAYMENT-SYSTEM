@@ -4,11 +4,12 @@
 // // var foodTotal = foodAmount.value + foodCharges;
 // var totalOf = foodAmount.value + foodCharges;
 
-var back = document.querySelector("#p-con")
-back.style.backgroundColor = "transparent";
-// total button
-var total = () => {
-  event.preventDefault();
+
+
+var total_button = document.querySelector(".total");
+
+total_button.addEventListener("click",total = () => {
+  // preventDefault();
   var foodAmount = document.querySelector("#amount");
   var foodCharges = Math.floor(Math.random()* 200)
   var output = document.querySelector("#output");
@@ -23,6 +24,7 @@ var total = () => {
   foodAmount.value = "";
 
 
+  
   // styling
   var bg = "transparent";
   var bore = "9px double pink";
@@ -59,17 +61,16 @@ var total = () => {
   button.style.cursor = cursor_p;
   //End of payment button
 
+  total_button.removeEventListener("click", total);
 
 
   customer_no.value = "";
     customer_name.value = "";
-
   button.addEventListener("click", makePayment = ()=>{
  
 
 var customer_no = document.querySelector("#customer_no");
     var customer_name = document.querySelector("#customer_name");
-  
 
 
     FlutterwaveCheckout({
@@ -95,6 +96,7 @@ var customer_no = document.querySelector("#customer_no");
         description: "PAYMENT FOR FOOD SERVICE",
         // logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
       },
+
     });
 
   
@@ -104,5 +106,5 @@ var customer_no = document.querySelector("#customer_no");
 
 
 }
-
+)
 //End of total button
